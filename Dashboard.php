@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanban UI</title>
+    <title>My Checklist Tracker</title>
     <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
     <div class="container">
         <div class="kanban-head">
-            <strong class="kanban-head-title">Kanban UI</strong>
+            <strong class="kanban-head-title">My Checklist Tracker</strong>
         </div>
 
         <div class="kanban-table">
@@ -23,18 +23,18 @@
                     <strong class="strong-input">Descripción Tarea: </strong>
                     <textarea type="text" id="tarea-descripcion" class="textarea-text" rows="4"></textarea>
 
-                    <strong class="strong-input">Fecha de Compromiso: </strong>
-                    <input type="date"></input>
+                        <strong class="strong-input">Fecha de Compromiso: </strong>
+                            <input type="date" id="fecha-de-compromiso">
 
-                    <strong class="strong-input">Prioridad: </strong>
-                        <select name="opcion" id="opciones">
+                            <strong class="strong-input">Prioridad: </strong>
+                            <select name="prioridad" id="tarea-prioridad">
                             <option value="" disabled selected>Seleccionar</option>
-                            <option value="opcion2">Baja</option>
-                            <option value="opcion3">Media</option>
-                            <option value="opcion4">Alta</option>
-                        </select>
+                                <option value="Baja">Baja</option>
+                                <option value="Media">Media</option>
+                                <option value="Alta">Alta</option>
+                            </select>
          
-                    <strong class="strong-input">Responsable Tarea: </strong>
+                    <strong class="strong-input">Responsable de Tarea: </strong>
                     <input type="text" id="tarea-responsable" class="input-text">
                 </div>
     
