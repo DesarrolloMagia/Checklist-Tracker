@@ -27,12 +27,21 @@ $(document).ready(function() {
             var currentState = ui.item.data("estado");
 
             if (targetKanbanBlock === "pendientes") {
-                updateTaskStatus(taskId, 'Pendiente');
+                var newStatus = 'Pendiente';
+                updateTaskStatus(taskId, newStatus);
             } else if (targetKanbanBlock === "procesos" && currentState !== 'Pendiente') {
-                updateTaskStatus(taskId, 'En Proceso');
+                var newStatus = 'En Proceso';
+                updateTaskStatus(taskId, newStatus);
             } else if (targetKanbanBlock === "completados" && currentState === 'En Proceso') {
-                updateTaskStatus(taskId, 'Completado');
+                var newStatus = 'Completado';
+                updateTaskStatus(taskId, newStatus);
             }
+
+            console.log("taskId: " + taskId);
+            console.log("targetKanbanBlock: " + targetKanbanBlock);
+            console.log("currentState: " + currentState);
+            console.log("newStatus: " + newStatus);
+
         }
     });
 
