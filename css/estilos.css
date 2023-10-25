@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(40, 40, 40);
+    background-color: #073b4c;
   }
   
   .container {
@@ -36,21 +36,25 @@ body {
 
   .kanban-table {
     height: fit-content;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     justify-content: space-between;
     font-family: sans-serif;
     margin-bottom: 2rem;
   }
-  
+
+  .kanban-form-container {
+    grid-column-start: 1; 
+    grid-column-end: 4; 
+    width: 500px; 
+    margin: 0 auto;
+}
+
   .kanban-block {
     text-align: center;
     padding: 0.6rem;
     margin: 0.5rem;
-    width: 30.5%;
-    height: auto;
-    min-width: 14rem;
-    min-height: 4.5rem;
     border-radius: 0.3rem;
     box-shadow: 2px 2px 2px 4px rgba(255, 255, 255, 0.1);
   }
@@ -59,7 +63,7 @@ body {
     height: fit-content;
     display: flex;
     flex-direction: column;
-    background-color: #018b01;
+    background-color: #118ab2;
     align-items: center;
     font-family: sans-serif;
     margin-bottom: 15px;
@@ -97,8 +101,8 @@ body {
   }
 
   .btn-crear {
-    width: 30%;
-    background: #2f17d1;
+    width: 140px;
+    background: #50d0f7;
     color: #e4e4e4;
     border-radius: 5px;
     border: 0;
@@ -109,14 +113,14 @@ body {
   }
 
   .btn-crear:hover {
-    background: #1c0d7b;
+    background: #097fa9;
     transition: 0.5s;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .btn-editar {
-    width: 30%;
-    background: #880875;
+    width: 40%;
+    background: #ea6382;
     color: #e4e4e4;
     border-radius: 5px;
     border: 0;
@@ -132,8 +136,8 @@ body {
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .btn-borrar {
-    width: 30%;
+  .btn-eliminar {
+    width: 40%;
     background: #cc0a0a;
     color: #e4e4e4;
     border-radius: 5px;
@@ -144,7 +148,7 @@ body {
     transition: 0.5s;
   }
 
-  .btn-borrar:hover {
+  .btn-eliminar:hover {
     background: #820707;
     transition: 0.5s;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -152,17 +156,17 @@ body {
   
   #pendientes {
     height: fit-content;
-    background-color: #fec6d1;
+    background-color: #ef476f;
   }
   
   #procesos {
     height: fit-content;
-    background-color: #ffaf00;
+    background-color: #ffd166;
   }
   
   #completados {
     height: fit-content;
-    background-color: #018b01;
+    background-color: #06d6a0;
   }
   
   .tarea {
