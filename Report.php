@@ -10,7 +10,6 @@
 <nav class="navbar">
         <ul class="navbar-list">
             <li class="navbar-item"><a class="button-link" href="Dashboard.php">Dashboard</a></li>
-            <!-- Otros elementos de navegación, si es necesario -->
         </ul>
     </nav>
     <div class="content-container">
