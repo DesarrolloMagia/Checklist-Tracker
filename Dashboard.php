@@ -11,6 +11,13 @@
 </head>
 
 <body>
+
+<nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="Report.php">Reporte</a></li>
+            <!-- Otros elementos de navegación, si es necesario -->
+        </ul>
+    </nav>
     <div class="container">
         <div class="kanban-head">
             <strong class="kanban-head-title">Mi lista de Control</strong>
