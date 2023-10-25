@@ -74,10 +74,11 @@
                         echo "<p>Hora de Culminación: " . $tarea['hora_culminacion'] . "</p>"; // Muestra la hora de culminación
                         echo "<p>Prioridad: " . $tarea['prioridad'] . "</p>";
                         echo "<p>Responsable: " . $tarea['responsable'] . "</p>";
-
+                        if ($tarea['edited'] == 1) {
+                            echo "<p><strong>Edited</strong></p>";
+                        }
                         echo "<a href='./app/Edit.php?id=" . $tarea['id'] . "' class='btn-editar'>Editar</a>";
                         echo "<a href='./app/Delete.php?id=" . $tarea['id'] . "' class='btn-eliminar'>Eliminar</a>";
-
                         echo "</div>";
                     }
                 } else {
@@ -103,7 +104,9 @@
                         echo "<p>Hora de Culminación: " . $tarea['hora_culminacion'] . "</p>"; // Muestra la hora de culminación
                         echo "<p>Prioridad: " . $tarea['prioridad'] . "</p>";
                         echo "<p>Responsable: " . $tarea['responsable'] . "</p>";
-
+                        if ($tarea['edited'] == 1) {
+                            echo "<p><strong>Edited</strong></p>";
+                        }
                         echo "<a href='./app/Edit.php?id=" . $tarea['id'] . "' class='btn-editar'>Editar</a>";
                         echo "<a href='./app/Delete.php?id=" . $tarea['id'] . "' class='btn-eliminar'>Eliminar</a>";
 
@@ -132,7 +135,9 @@
                         echo "<p>Hora de Culminación: " . $tarea['hora_culminacion'] . "</p>"; // Muestra la hora de culminación
                         echo "<p>Prioridad: " . $tarea['prioridad'] . "</p>";
                         echo "<p>Responsable: " . $tarea['responsable'] . "</p>";
-
+                        if ($tarea['edited'] == 1) {
+                            echo "<p><strong>Edited</strong></p>";
+                        }
                         echo "</div>";
                     }
                 } else {
