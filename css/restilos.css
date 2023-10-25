@@ -87,3 +87,18 @@
     transition: 0.5s;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
+  /* Agregar estilos para el contenedor principal */
+.content-container {
+  margin-top: 20px; /* Ajusta la separación desde el margen superior según tus preferencias */
+}
+
+/* Estilos para el enlace de botón */
+.button-link {
+  display: block;
+  width: 50px; /* Ancho de la imagen */
+  height: 50px; /* Altura de la imagen */
+  background-image: url('/assets/deshacer.png'); /* Ruta de tu imagen PNG */
+  background-size: cover; /* Ajusta el tamaño de la imagen para llenar el enlace */
+  text-indent: -9999px; /* Oculta el texto del enlace */
+  margin-right: 10px; /* Ajusta el margen derecho para la separación horizontal */
+}
