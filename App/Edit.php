@@ -38,12 +38,14 @@ if (isset($_GET['id'])) {
 
         // Formulario para editar la tarea
         ?>
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Editar Tarea</title>
-        </head>
-        <body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Editar Tarea</title>
+        <link rel="stylesheet" type="text/css" href="/css/edit.css"> <!-- Enlaza tu archivo CSS aquí -->
+    </head>
+    <body>
+        <div class="card">
             <h2>Editar Tarea</h2>
             <form method="POST">
                 <input type="text" name="tarea-nombre" value="<?php echo $tarea['nombre']; ?>" placeholder="Nombre de la tarea">
@@ -57,9 +59,11 @@ if (isset($_GET['id'])) {
                 <input type="text" name="tarea-responsable" value="<?php echo $tarea['responsable']; ?>" placeholder="Responsable de la tarea">
                 <input type="submit" value="Guardar Cambios">
             </form>
-        </body>
-        </html>
-        <?php
+        </div>
+    </body>
+    </html>
+
+    <?php
     }
 } else {
     echo "ID de tarea no proporcionado.";
