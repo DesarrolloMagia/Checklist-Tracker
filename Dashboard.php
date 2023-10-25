@@ -13,13 +13,13 @@
 <body>
     <div class="container">
         <div class="kanban-head">
-            <strong class="kanban-head-title">My Checklist Tracker</strong>
+            <strong class="kanban-head-title">Mi lista de Control</strong>
         </div>
 
         <div class="kanban-table">
             <div class="kanban-form-container">
             <form action="app/Crear.php" method="POST">
-                    <div class="kanban-block kanban-form">
+                    <div class="kanban-form">
                         <strong class="kanban-form-title">Tarea</strong>
                         <div class="container-inputs">
                             <strong class="strong-input">Nombre Tarea: </strong>
@@ -47,10 +47,6 @@
                     </div>
                 </form>
             </div>
-                
-            
-
-
             <div class="kanban-block" id="pendientes" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <strong>PENDIENTES</strong>
                 <?php
@@ -82,7 +78,6 @@
                 }
                 ?>
             </div>
-
             <div class="kanban-block" id="procesos" ondrop="drop(event, 'En Proceso')" ondragover="allowDrop(event)">
                 <strong>EN PROCESO</strong>
                 <?php
@@ -94,7 +89,7 @@
 
                 if (count($tareasEnProceso) > 0) {
                     foreach ($tareasEnProceso as $tarea) {
-                        echo "<div class='tarea' draggable='true' ondragstart='drag(event)' id='tarea-" . $tarea['id'] . "'>";
+                        echo "<div class='tarea' draggable='true' ondragstart='drag(event)' id='tarea-" . $tarea['id'] . "' data-estado='" . $tarea['estado'] . "'>";
                         echo "<p>Nombre: " . $tarea['nombre'] . "</p>";
                         echo "<p>Descripción: " . $tarea['descripcion'] . "</p>";
                         echo "<p>Fecha de Compromiso: " . $tarea['fecha_compromiso'] . "</p>";
@@ -112,7 +107,6 @@
                 }
                 ?>
             </div>
-
             <div class="kanban-block" id="completados" ondrop="drop(event, 'Completado')" ondragover="allowDrop(event)">
                 <strong>COMPLETADOS</strong>
                 <?php
@@ -146,6 +140,5 @@
     <script type="text/javascript" charset="utf-8" src="./js/jquery-ui.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
-
 </html>
 <?
